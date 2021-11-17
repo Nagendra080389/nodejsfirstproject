@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+const PORT = process.env.PORT || 5000
 
 
 app.post('/api/v1/testPost/', (req, res) => {
@@ -12,4 +13,4 @@ app.post('/api/v1/testPost/', (req, res) => {
     return;
 });
 
-app.listen(3000, () => console.log(`App is running`));
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
