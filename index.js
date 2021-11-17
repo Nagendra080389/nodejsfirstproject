@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 5000
 
 app.post('/api/v1/testPost/', (req, res) => {
     console.log(req.body);
-    console.log(res);
     res.status(200).send('All is Ok')
     return;
 });
